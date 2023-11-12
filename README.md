@@ -48,14 +48,15 @@ Dataset ini terdiri dari 20.188 baris data dengan dua kolom utama:
 
 ### Exploratory Data Analysis (EDA)
 
-** Gambar Arsitektur Exploratory Data Analysis (EDA) **
+**Gambar Arsitektur Exploratory Data Analysis (EDA)**
+
 ![2_multiclass_EDA](docs/docs/images/2_multiclass_EDA.png)
 
 Selanjutnya masuk ketahap EDA (Exploratory Data Analysis), ditahap ini melakukan eksplorasi terkait dengan mengenal data lebih jauh, prosesnya antara lain, yang pertama, akan melakukan Basic Text Exploration yakni Melihat “title” dengan nama terpanjang, Melihat “title” dengan nama terpendek, Melihat produk dengan judul yang mengandung karakteristik tertentu, Mencari baris yang mengandung tanda baca atau karakter khusus, Cari baris dengan multiple spaces pada kolom title. Kedua, Data Proportion dengan melakukan Cek Proporsi Data baik secara jumlah dan persentase label target. Ketiga, Text Representation, dengan Eksplorasi Awal Pembangunan Model Word2Vec untuk Representasi Kata pada Data Teks. Keempat, Exploration of Grouping Data yakni dengan Eksplorasi Awal Pengelompokan Data Teks dengan K-Means Menggunakan Ekstraksi Fitur TF-IDF dan Visualisasi dengan PCA. Terakhir adalah melakukan WordCloud.
 
 ### Data Preprocessing
 
-** Gambar Data Preprocessing **
+**Gambar Data Preprocessing**
 ![3_multiclass_preproc](docs/docs/images/3_multiclass_preproc.png)
 
 Saat ini masuk ke tahap Data Preprocessing, tahap pertama yang akan dilakukan setelah melakukan read data hasil dari data prepration adalah melakukan eksekusi data pasca EDA (Mandatory from EDA), yakni Remove special characters and convert to lowercase dan Remove stopwords and join the words with a single space, setelah itu dilanjut dengan transformasi data dengan menggunakan TFIDF dengan tujuan memberikan bobot pada kata-kata yang muncul secara unik dan penting dalam suatu dokumen, sehingga dapat membedakan dokumen satu dengan yang lain. Tak lupa melakukan label encoder untuk data target dengan Electronics -> 0, Grocery & Gourmet Food -> 1, Home & Kitchen -> 2, Industrial & Scientific -> 3, Office Products -> 4, Tools & Home Improvement -> 5. Setelah proses tersebut selesai, maka data akan disave.
@@ -68,7 +69,7 @@ Saat ini masuk ke tahap Data Preprocessing, tahap pertama yang akan dilakukan se
 
 ## Machine Learning Services
 
-** Arsitektur Machine Learning Services **
+**Arsitektur Machine Learning Services**
 ![5_multiclass_mlservice](docs/docs/images/5_multiclass_mlservice.png)
 
 
