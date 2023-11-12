@@ -1,6 +1,6 @@
 # E-Commerce Product Classification Using Multi-class Classification
 
-- `Link Dokumentasi` : -
+- `Link Dokumentasi` : [-](https://prasetyowidyantoro.github.io/E-Commerce-Product-Classification-Using-Multi-class-Classification/)
 - `Link Medium` : https://medium.com/@prasetyow938/natural-language-processing-online-store-product-classification-using-multi-class-classification-81975d03e4a3
 - `Link Youtube` : -
 
