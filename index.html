@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Prediksi Klasifikasi Produk Toko Online" /><meta name="author" content="Prasetyo Widyantoro" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Home - E-Commerce Product Classification</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DOKUMENTASI";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Home - E-Commerce Product Classification
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href=".">DOKUMENTASI</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#business-problem">Business Problem</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#business-objective">Business Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-solution">Machine Learning Solution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-metrics">Machine Learning Metrics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#literature-review">Literature Review</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#end-to-end-machine-learning-process">End to End Machine Learning Process</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preparation">Data Preparation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dataset-definition">Dataset Definition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-preprocessing">Data Preprocessing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-modeling">Data Modeling</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#machine-learning-services">Machine Learning Services</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#menggunakan-docker-container">Menggunakan Docker Container</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#penggunaan-docker">Penggunaan Docker</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kesimpulan">Kesimpulan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#future-works">Future Works</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referensi">Referensi</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="about/">TENTANG SAYA</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Home - E-Commerce Product Classification</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>DOKUMENTASI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="e-commerce-product-classification-using-multi-class-classification">E-Commerce Product Classification Using Multi-class Classification</h1>
+<h2 id="business-problem">Business Problem</h2>
+<p>Di era online store yang terus berkembang, pengklasifikasian produk secara otomatis merupakan tantangan yang serius. Setiap produk di platform online harus ditempatkan dalam kategori yang sesuai dengan karakteristiknya. Untuk mengatasi permasalahan ini, perlu mengembangkan solusi yang memanfaatkan pemrosesan bahasa alami (Natural Language Processing — NLP).</p>
+<p>Tantangan utama yang dihadapi adalah menciptakan model multi-class classification yang dapat memahami deskripsi produk dan mengkategorikannya dengan benar. Keakuratan dalam mengklasifikasikan produk ke dalam kategori yang sesuai sangat penting untuk meningkatkan pengalaman pengguna.</p>
+<p>Dalam konteks ini, kesalahan pengklasifikasian produk ke dalam kategori yang salah bisa mengakibatkan ketidakpuasan pelanggan. Namun, peningkatan jumlah False Positive (produk yang salah diklasifikasikan ke dalam kategori tertentu) juga harus dihindari sebisa mungkin.</p>
+<p>Dengan fokus pada multi-class classification menggunakan NLP, tujuannya adalah menciptakan sistem yang dapat mengkategorikan produk dengan akurat. Hal ini akan membantu meningkatkan efisiensi operasional, meningkatkan pengalaman pelanggan, dan mengoptimalkan penjualan di platform online store. Dengan kata lain, program ini berusaha untuk memastikan bahwa setiap produk ditempatkan dalam kategori yang paling sesuai berdasarkan titlenya, sehingga pembeli dapat menemukan apa yang mereka cari dengan lebih mudah.</p>
+<h2 id="business-objective">Business Objective</h2>
+<p>Dalam rangka meningkatkan pengalaman pelanggan dan efisiensi operasional di platform online store, objektif bisnis pada program ini antara lain:</p>
+<ol>
+<li>
+<p>Peningkatan Akurasi Klasifikasi: Tujuan utama program ini adalah mengembangkan model klasifikasi produk berbasis pemrosesan bahasa alami (NLP) yang mampu mengkategorikan setiap produk dengan tingkat akurasi yang tinggi. Dengan demikian, program ini akan meminimalkan kesalahan dalam menempatkan produk dalam kategori yang sesuai.</p>
+</li>
+<li>
+<p>Optimasi Pengalaman Pengguna: Program ini berusaha untuk memberikan pengalaman belanja online yang lebih baik bagi pelanggan. Dengan model klasifikasi yang akurat, produk dapat ditempatkan dalam kategori yang benar, memudahkan pembeli dalam menemukan produk yang mereka cari.</p>
+</li>
+<li>
+<p>Penghematan Waktu dan Sumber Daya: Dengan otomatisasi klasifikasi produk, program ini diharapkan bisa menghemat waktu dan sumber daya yang sebelumnya digunakan untuk mengelola pengkategorian produk secara manual.</p>
+</li>
+<li>
+<p>Peningkatan Penjualan: Dengan produk yang lebih mudah ditemukan oleh pembeli, program ini diharapkan berguna untuk mengoptimalkan penjualan di online store. Produk yang sesuai dengan preferensi pembeli akan lebih mudah dijelajahi dan ditemukan, meningkatkan potensi konversi penjualan.</p>
+</li>
+</ol>
+<h2 id="machine-learning-solution">Machine Learning Solution</h2>
+<p>Solusi pemrosesan bahasa alami (NLP) untuk proyek Klasifikasi Produk Online Store ini difokuskan pada pengembangan model klasifikasi produk yang dapat memprediksi kategori yang paling sesuai berdasarkan deskripsi atau judul produk yang diunggah. Dalam konteks ini, proyek ini menggunakan algoritme Machine Learning Logistic Regression sebagai inti solusi.</p>
+<p>Program ini dimulai dengan langkah-langkah penting seperti pemrosesan data dan feature engineering. Data produk yang masuk harus dipersiapkan agar sesuai untuk proses klasifikasi. Ini melibatkan membersihkan teks dari karakter khusus, mengonversi huruf menjadi huruf kecil, dan menghilangkan kata-kata yang tidak relevan. Selanjutnya, hal ini menghasilkan fitur-fitur yang relevan dari teks produk, seperti penggunaan teknik vectorization (misalnya, TF-IDF) untuk mengubah teks menjadi representasi angka yang dapat digunakan oleh model.</p>
+<p>Program ini memanfaatkan model klasifikasi Logistic Regression. Model ini ditrain dengan menggunakan data training yang telah dipersiapkan. Logistic Regression adalah pilihan yang baik karena kemampuannya dalam menangani masalah klasifikasi multi-kelas, yang sesuai dengan kebutuhan dalam mengkategorikan produk ke dalam beberapa kategori yang berbeda.</p>
+<p>Setelah model Logistic Regression ditrain, program ini dapat digunakan untuk memprediksi kategori yang paling sesuai untuk setiap produk yang diunggah ke platform toko online. Misalnya, program ini dapat memprediksi bahwa produk tersebut termasuk dalam kategori Electronics -&gt; 0, Grocery &amp; Gourmet Food -&gt; 1, Home &amp; Kitchen -&gt; 2, Industrial &amp; Scientific -&gt; 3, Office Products -&gt; 4, Tools &amp; Home Improvement -&gt; 5 tergantung pada deskripsi atau judul produk yang diunggah.</p>
+<p>Selain itu, program ini juga mencakup elemen perbaikan dan monitoring berkelanjutan. Model Logistic Regression harus dimonitor secara berkala untuk memastikan bahwa klasifikasi produk tetap akurat dan relevan seiring dengan perubahan dalam preferensi konsumen dan pasar. Pemantauan kinerja model akan memungkinkan untuk mengambil tindakan yang sesuai jika ada penurunan dalam akurasi klasifikasi.</p>
+<h2 id="machine-learning-metrics">Machine Learning Metrics</h2>
+<p><code>Prediksi Klasifikasi Produk Toko Online menggunakan Multi-class Classification</code> adalah alat analisis data yang digunakan untuk mengidentifikasi produk dalam toko online berdasarkan deskripsi produk yang telah diberikan. Kumpulan data ini berisi informasi tentang produk di online store, dan variabel targetnya adalah variabel kelas (kategori produk) yang mencerminkan kelas produk mana yang sesuai. Variabel fitur digunakan untuk memproses dan memprediksi kategori produk yang paling relevan untuk setiap deskripsi produk.</p>
+<p>Pada kasus ini, fokus utama adalah pada metrik bisnis, yaitu <code>recall</code>. <code>Recall</code> dalam konteks ini lebih mengutamakan kemampuan model untuk memprediksi kategori produk yang benar daripada produk yang salah. Ini berarti model akan berupaya meminimalkan jumlah produk yang sebenarnya termasuk dalam kategori tertentu namun diprediksi sebagai kategori lain (False Negative), dan meningkatkan jumlah produk yang diprediksi dengan benar ke dalam kategori yang sesuai (True Positive). Meskipun hal ini dapat mengurangi jumlah produk yang benar-benar tidak masuk dalam kategori tertentu yang diprediksi sebagai masuk (False Positive), fokus utama tetap pada memastikan bahwa produk yang benar-benar masuk dalam kategori tersebut terdeteksi dengan baik.</p>
+<p>Dengan demikian, model NLP yang digunakan dalam tugas klasifikasi produk online store akan dioptimalkan untuk mencapai nilai recall yang tinggi, sehingga produk diklasifikasikan dengan akurasi yang lebih baik ke dalam kategori yang sesuai, mengurangi jumlah produk yang terlewatkan atau salah klasifikasi.”</p>
+<h2 id="literature-review">Literature Review</h2>
+<p><strong>Model Klasifikasi Berbasis Multiclass Classification dengan Kombinasi Indobert Embedding dan Long ShortTerm Memory untuk Tweet Berbahasa Indonesia (Classification Model Based on Multiclass Classification with a Combination of Indobert Embedding and Long Short-Term Memory for Indonesian-language Tweets</strong></p>
+<p>Kombinasi pre-trained IndoBERT dan Long Short-Term Memory (LSTM) memberikan hasil pengklasifikasian yang lebih baik, baik pada dataset asli maupun yang telah dimodifikasi. Model IndoBERT-LSTM dengan hyperparameter terbaik (batch size 16, learning rate 2e-5, dan average pooling) mencapai F1-score 98,90% pada dataset asli dan 92,83% pada dataset dimodifikasi. Peningkatan performa IndoBERT-LSTM dari fine-tuned IndoBERT tidak terlalu signifikan. (Iskandar Zulkarnain Maulana Putra et al., 2022)</p>
+<p><strong>Multi-Class Text Classification of Uzbek News Articles using Machine Learning.</strong></p>
+<p>Dalam tulisan ini, klasifikasi teks multiclass untuk teks yang ditulis dalam bahasa Uzbek. Artikel-artikel dari sepuluh kategori dipilih dari edisi berita online Uzbek “Daryo”. Saat melakukan klasifikasi teks multiclass untuk dataset ini, enam algoritma pembelajaran mesin yang berbeda digunakan: Support Vetor Machine (SVM), Decision Tree (DTC), Random Forest (RF), Logistic Regression (LR), dan Naïve Bayes Multinomial (MNB). Algoritma TF-IDF dan model n-gram pada tingkat kata dan karakter digunakan sebagai metode ekstraksi fitur. Saat menentukan hiperparameter untuk klasifikasi teks, validasi silang 5-fold digunakan. Percobaan dilakukan dan akurasi tertinggi mencapai 86,88% (Rabbimov &amp; Kobilov, 2020).</p>
+<p><strong>Building Multiclass Classification Model of Logistic Regression and Decision Tree Using the Chi-Square Test for Variable Selection Method.</strong></p>
+<p>Feature Selection menggunakan pendekatan filter menunjukkan bahwa semua fitur prediktor bergantung pada fitur target. Fitur prediktor yang independen satu sama lain melibatkan riwayat diabetes ibu sebelum hamil (X2), tekanan darah ayah (X3), kondisi psikologis ayah (X8), dan kualitas air minum (X10). Selain itu, fitur-fitur ini merupakan masukan model klasifikasi. Distribusi label kelas dataset tidak seimbang, di mana Kelas 0 mendominasi sekitar 70% dari contoh Kelas 0, tetapi hanya ada 0,33% atau 3 dari 900 contoh Kelas 1. Ketidakseimbangan distribusi label kelas ini dapat mengganggu perolehan model klasifikasi yang lebih baik. Model Decision Tree memiliki kinerja lebih tinggi daripada model Logistic Regression. Ukuran kinerja, termasuk Accuracy, precision, recall, dan F1-score, masing-masing adalah 90%, 89%, 90%, dan 89% untuk Logistic Regression dibandingkan dengan 91%, 90%, 91%, dan 90% untuk model Decision Tree. Selain itu, model Decision Tree dapat menunjukkan tingkat fitur penting dalam proses pemisahan saat membangun model.(Nugroho et al., 2022)</p>
+<h2 id="end-to-end-machine-learning-process">End to End Machine Learning Process</h2>
+<p>Prosesnya akan melakukan data preparation, EDA, Data Preprocessing, Data Modeling hingga Machine Learning Service menggunakan API, Streamlit dengan Docker.</p>
+<h3 id="data-preparation">Data Preparation</h3>
+<p><strong>Gambar Arsitektur Data Preparation</strong>
+<img alt="1_multiclass_prep" src="images/1_multiclass_prep.png" /></p>
+<p>Data preparation diawali dengan read raw data, dilanjut dengan pendefinisian kolom kolom yang akan diproses, tak lupa melalui data validation terkhusus untuk melakukan pengecekan tipe data, dan dilanjut data splitting untuk memisahkan antara data train, data valid dan data test dan akhirnya data akan disave sebelum dilanjutkan ke tahap data preprocessing.</p>
+<p>Data yang digunakan dalam analisis ini mencakup informasi tentang nama produk dan kategori produk yang diambil dari dataset berikut</p>
+<h4 id="dataset-definition">Dataset Definition</h4>
+<p>Sumber Data: <a href="https://www.kaggle.com/datasets/shivam1298/predict-categories-of-items-using-nlp">Predict Categories of Items using NLP</a></p>
+<p>Dataset ini terdiri dari 20.188 baris data dengan dua kolom utama:</p>
+<ul>
+<li><code>title</code>: Kolom ini berisi nama produk yang dijual di platform e-commerce.</li>
+<li><code>category</code>: Kolom ini berisi kategori atau klasifikasi produk yang sesuai dengan produk tersebut.</li>
+</ul>
+<h3 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h3>
+<p><strong> Gambar Arsitektur Exploratory Data Analysis (EDA) </strong>
+<img alt="2_multiclass_EDA" src="images/2_multiclass_EDA.png" /></p>
+<p>Selanjutnya masuk ketahap EDA (Exploratory Data Analysis), ditahap ini melakukan eksplorasi terkait dengan mengenal data lebih jauh, prosesnya antara lain, yang pertama, akan melakukan Basic Text Exploration yakni Melihat “title” dengan nama terpanjang, Melihat “title” dengan nama terpendek, Melihat produk dengan judul yang mengandung karakteristik tertentu, Mencari baris yang mengandung tanda baca atau karakter khusus, Cari baris dengan multiple spaces pada kolom title. Kedua, Data Proportion dengan melakukan Cek Proporsi Data baik secara jumlah dan persentase label target. Ketiga, Text Representation, dengan Eksplorasi Awal Pembangunan Model Word2Vec untuk Representasi Kata pada Data Teks. Keempat, Exploration of Grouping Data yakni dengan Eksplorasi Awal Pengelompokan Data Teks dengan K-Means Menggunakan Ekstraksi Fitur TF-IDF dan Visualisasi dengan PCA. Terakhir adalah melakukan WordCloud.</p>
+<p><strong>Sample Exploration</strong></p>
+<p><strong>Data Proportion</strong></p>
+<p><img alt="EDA_1_Data_Proportion" src="images/EDA_1_Data_Proportion.png" /></p>
+<p><strong>Data Grouping</strong></p>
+<p><img alt="EDA_1_Data_Proportion" src="images/EDA_1_Data_Proportion.png" /></p>
+<p><strong>WordCloud</strong></p>
+<p><img alt="EDA_3_Wordcloud" src="images/EDA_3_Wordcloud.png" /></p>
+<h3 id="data-preprocessing">Data Preprocessing</h3>
+<p><strong> Gambar Data Preprocessing </strong>
+<img alt="3_multiclass_preproc" src="images/3_multiclass_preproc.png" /></p>
+<p>Saat ini masuk ke tahap Data Preprocessing, tahap pertama yang akan dilakukan setelah melakukan read data hasil dari data prepration adalah melakukan eksekusi data pasca EDA (Mandatory from EDA), yakni Remove special characters and convert to lowercase dan Remove stopwords and join the words with a single space, setelah itu dilanjut dengan transformasi data dengan menggunakan TFIDF dengan tujuan memberikan bobot pada kata-kata yang muncul secara unik dan penting dalam suatu dokumen, sehingga dapat membedakan dokumen satu dengan yang lain. Tak lupa melakukan label encoder untuk data target dengan Electronics -&gt; 0, Grocery &amp; Gourmet Food -&gt; 1, Home &amp; Kitchen -&gt; 2, Industrial &amp; Scientific -&gt; 3, Office Products -&gt; 4, Tools &amp; Home Improvement -&gt; 5. Setelah proses tersebut selesai, maka data akan disave.</p>
+<h3 id="data-modeling">Data Modeling</h3>
+<p><strong>Gambar Arsitektur Data Modeling</strong>
+<img alt="4_multiclass_modeling" src="images/4_multiclass_modeling.png" /></p>
+<p>Setelah data dari hasil preprocessing sudah disave, maka akan di load pada tahap data modeling, selanjutnya data akan masuk ke tahap pemodelan dengan experimentasi berbagai model, seperti decisiontree, randomforest, xgboost, bagging, logisticregression, dan lightgbm. Namun hasil terbaik dengan value evaluation metrics terbaik yaitu menggunakan model LogisticRegression dengan Tunning Parameter {‘C’: 0.01, ‘penalty’: ‘none’, ‘solver’: ‘saga’}, dan hasil evaluation metrics dengan metrics recall yaitu, Validation recall: 0.8500414250207126, Test recall: 0.8387096774193549</p>
+<p><img alt="Modeling_1_Best_Parameter" src="images/Modeling_1_Best_Parameter.png" /></p>
+<p>Teori di balik pembuatan model machine learning multiclass dengan menggunakan Logistic Regression melibatkan beberapa konsep matematis yang mendasari algoritma ini. Logistic Regression adalah metode yang umum digunakan untuk tugas klasifikasi di mana kita memiliki lebih dari dua kelas atau kategori. Dalam konteks ini, kita akan menjelaskan teori yang terlibat dalam penggunaan Logistic Regression untuk masalah multiclass dengan penalaan parameter tertentu.</p>
+<p><strong>Logistic Regression Multiclass:</strong></p>
+<p><strong>Model Dasar</strong></p>
+<p>Logistic Regression melibatkan fungsi logistik P(Y=1) = 1 / (1 + e^(-z)), di mana z adalah kombinasi linear dari fitur.
+Untuk masalah multiclass, kita menggeneralisasi ini dengan One-vs-Rest (OvR) atau One-vs-One (OvO). Dalam OvR, kita memiliki model terpisah untuk setiap kelas vs. semua kelas lainnya. Dalam OvO, kita memiliki model untuk setiap pasangan kelas.</p>
+<p><strong> Fungsi Objektif (Cost Function):</strong></p>
+<p>Fungsi objektif dalam Logistic Regression adalah fungsi log-likelihood, yang ingin kita maksimalkan.
+Penalaan parameter, seperti yang dinyatakan dalam tuning parameter, mencakup C (kebalikan dari kekuatan regularisasi) dan jenis regularisasi (L1, L2, atau none).</p>
+<p><strong>Penanganan Multiclass:</strong></p>
+<p>OvR melibatkan training model biner untuk setiap kelas, yang kemudian memberikan probabilitas untuk kelas tersebut.
+OvO melibatkan training model untuk setiap pasangan kelas dan memilih kelas yang memenangkan pertempuran terbanyak.</p>
+<p><strong>Tuning Parameter {‘C’: 0.01, ‘penalty’: ‘none’, ‘solver’: ‘saga’}:</strong></p>
+<p><strong>Parameter C:</strong></p>
+<p>Parameter kebalikan dari kekuatan regularisasi. Semakin kecil nilai C, semakin tinggi regularisasi, yang dapat membantu mencegah overfitting.</p>
+<p><strong>Penalty:</strong></p>
+<p>‘None’ menunjukkan tidak ada regularisasi. Ini bisa cocok jika data sangat besar dan kita tidak ingin menerapkan regularisasi.</p>
+<p><strong>Solver:</strong></p>
+<p>‘SAGA’ (Stochastic Average Gradient Descent) adalah salah satu solver yang cocok untuk masalah dengan dataset besar. Ini adalah variasi dari SGD yang efisien untuk masalah regresi logistik.</p>
+<p><strong>Sample Evaluation Metrics</strong></p>
+<p><strong>Score Recall</strong></p>
+<p><img alt="Modeling_2_Recall_Score" src="images/Modeling_2_Recall_Score.png" /></p>
+<p><strong>Classification Report</strong></p>
+<p><img alt="Modeling_3_Classification_Report" src="images/Modeling_3_Classification_Report.png" /></p>
+<p><strong>Confusion Matrix</strong></p>
+<p><img alt="Modeling_4_Confusion_Matrix" src="images/Modeling_4_Confusion_Matrix.png" /></p>
+<p><strong>ROC AUC</strong></p>
+<p><img alt="Modeling_5_ROCAUC" src="images/Modeling_5_ROCAUC.png" /></p>
+<h2 id="machine-learning-services">Machine Learning Services</h2>
+<p><strong> Arsitektur Machine Learning Services </strong>
+<img alt="5_multiclass_mlservice" src="images/5_multiclass_mlservice.png" /></p>
+<p>Dalam prosesnya machine learning service diawali dengan user yang melakukan input data, lalu data yang telah diinput dilakukan convert ke pandas dataframe dan melalui proses data defense agar data yang di input sesuai dengan model yang telah ditrain. Selanjutnya, Remove special characters and convert to lowercase dan Remove stopwords and join the words with a single space. Data yang telah dilakukan proses cleansing dilanjutkan dengan transformasi dengan TFIDF dan akhirnya dilakukan prediksi dari model yang telah kita save pada data modeling.</p>
+<p>Dalam melakukan prediksi, user melakukan input data di laman streamlit yang merupakan front end dari aplikasi. Setelah user melakukan klik pada “Predict”, data tersebut melakukan request ke back-end, dan back end mengembalikan atau merespon (response) dalam bentuk hasil prediksi ke user.</p>
+<p>Framework API yang digunakan dalam proses Machine Learning Service adalah FASTAPI, dan Front End menggunakan Streamlit</p>
+<p><strong>Prediksi menggunakan API dengan menggunakan FASTAPI</strong></p>
+<p>Selanjutnya, setelah melalui beberapa proses dan model telah di save akan dilanjutkan pada deployment dengan menggunakan API dan Streamlit gambar dibawah ini merupakan contoh mengakses menggunakan ML Services melalui FAST API Swagger UI</p>
+<p>Berikut contoh input data yang digunakan untuk mengakses API</p>
+<p><img alt="API_1_FastApi" src="images/API_1_FastApi.png" /></p>
+<p>Agar lebih ramah dalam menggunakannya dan tampilannya lebih powerfull, user disuguhkan dengan apps sederhana yang dibangun dengan menggunakan streamlit services, berikut contoh penggunaannya</p>
+<p><strong>Prediksi menggunakan form yang telah disediakan</strong></p>
+<p><img alt="ML_Service_1_Streamlit" src="images/ML_Service_1_Streamlit.png" /></p>
+<p><strong>Prediksi menggunakan file CSV</strong></p>
+<p><img alt="ML_Service_2_Streamlit" src="images/ML_Service_2_Streamlit.png" /></p>
+<h2 id="menggunakan-docker-container">Menggunakan Docker Container</h2>
+<p>Ketika service ingin dijalankan bersamaan, maka kita perlu menggunakan tools yang mendukung hal tersebut, salah satunya dapat menggunakan docker berikut contoh service sederhana yang dijalankan dengan bantuan docker</p>
+<p>Berikut hasil input service ke docker container
+<img alt="Docker_Container" src="images/Docker_Container.png" /></p>
+<p>Berikut hasil input service ke docker Image
+<img alt="Docker_Image" src="images/Docker_Image.png" /></p>
+<h2 id="penggunaan-docker">Penggunaan Docker</h2>
+<ol>
+<li>Pastikan sudah melakukan clone repository program ini</li>
+<li>instalasi virtual environment</li>
+<li>aktifkan virtual environment yang telah dibuat</li>
+<li>install requirements.txt dengan cara pip install -r requirements.txt</li>
+<li>pastikan docker sudah diaktifkan dan dalam kondisi login</li>
+<li>lalu, jalankan melalui terminal yang sudah diaktifkan virtual environment dengan script berikut docker compose up -d --build</li>
+<li>Machine Learning Service “Online Store Product Classification Using Multi-class Classification” siap untuk digunakan.</li>
+<li>API : http://localhost:8080/docs dan UI Front End (Streamlit) : http://localhost:8501</li>
+</ol>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<ol>
+<li>
+<p>Project yang berjudul Natural Language Processing: Online Store Product Classification Using Multi-class Classification memiliki kolom title yaitu Kolom ini berisi nama produk yang dijual di platform e-commerce, category yaitu Kolom ini berisi kategori atau klasifikasi produk yang sesuai dengan produk tersebut, kolom yang akan menjadi variabel x yaitu kolom title yang akan digunakan untuk memprediksi kolom y yaitu category yang memiliki 5 class antara lain Electronics -&gt; 0, Grocery &amp; Gourmet Food -&gt; 1, Home &amp; Kitchen -&gt; 2, Industrial &amp; Scientific -&gt; 3, Office Products -&gt; 4, Tools &amp; Home Improvement -&gt; 5.</p>
+</li>
+<li>
+<p>Project ini turut melakukan eksperimentasi model untuk mendapatkan model yang optimal dalam memprediksi category dari title, setelah melakukan eksperimentasi metrics yang digunakan adalah recall, model LogisticRegression dengan Parameter Tunning Tuning Parameter {‘C’: 0.01, ‘penalty’: ‘none’, ‘solver’: ‘saga’} ditetapkan sebagai model terbaik yang digunakan untuk proses production atau deployment model dengan hasil evaluation metrics Validation recall: 0.8500414250207126, Test recall: 0.8387096774193549. Hasil Pemodelan tersebut dirasa cukup representatif untuk digunakan untuk memprediksi category.</p>
+</li>
+</ol>
+<h2 id="future-works">Future Works</h2>
+<ol>
+<li>Dapat menambah data sebanyak mungkin, dan melakukan jauh lebih banyak label data, jadi tidak hanya 5 saja yang diprediksi, karena jumlah catogory produk dalam dunia nyata jauh lebih banyak.</li>
+<li>Bisa melakukan eksperimentasi model dengan menggunakan model deep learning.</li>
+<li>Dapat pula diekplorasi lebih jauh terkait penggunaan ui agar jauh lebih menarik</li>
+</ol>
+<h2 id="referensi">Referensi</h2>
+<ul>
+<li>https://www.projectpro.io/article/multi-class-classification-python-example/547?source=post_page-----81975d03e4a3--------------------------------</li>
+<li>https://towardsdatascience.com/comprehensive-guide-to-multiclass-classification-with-sklearn-127cc500f362?source=post_page-----81975d03e4a3--------------------------------</li>
+<li>https://www.kaggle.com/code/satishgunjal/binary-multiclass-classification-using-sklearn?source=post_page-----81975d03e4a3--------------------------------#Train-and-Evaluate-a-Binary-Classification-Model</li>
+<li>https://builtin.com/machine-learning/multiclass-classification</li>
+<li>Iskandar Zulkarnain Maulana Putra, T., Farhan Bukhori, A., Ilmu Pengetahuan Alam, dan, &amp; Gadjah Mada, U. (2022). Model Klasifikasi Berbasis Multiclass Classification dengan Kombinasi Indobert Embedding dan Long Short-Term Memory untuk Tweet Berbahasa Indonesia (Classification Model Based on Multiclass Classification with a Combination of Indobert Embedding and Long Short-Term Memory for Indonesian-language Tweets). Jurnal Ilmu Siber Dan Teknologi Digital (JISTED), 1(1), 1–28. https://doi.org/10.35912/jisted.v1i1.1509</li>
+<li>Nugroho, W. H., Handoyo, S., Akri, Y. J., &amp; Sulistyono, A. D. (2022). Building Multiclass Classification Model of Logistic Regression and Decision Tree Using the Chi-Square Test for Variable Selection Method. Journal of Hunan University Natural Sciences, 49(4), 172–181. https://doi.org/10.55463/issn.1674-2974.49.4.17</li>
+<li>Rabbimov, I. M., &amp; Kobilov, S. S. (2020). Multi-Class Text Classification of Uzbek News Articles using Machine Learning. Journal of Physics: Conference Series, 1546(1). https://doi.org/10.1088/1742-6596/1546/1/012097</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="about/" class="btn btn-neutral float-right" title="TENTANG SAYA">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Prasetyowidyantoro12@2023</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme_extra.js" defer></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.4.2
+Build Date UTC : 2023-11-12 08:05:11.743466+00:00
+-->
